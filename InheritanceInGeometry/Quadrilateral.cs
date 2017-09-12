@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 namespace InheritanceInGeometry
 {
     public class Quadrilateral {
-		private int s1;
-		private int s2;
-		private int s3;
-		private int s4;
+		protected int s1;
+		protected int s2;
+		protected int s3;
+		protected int s4;
 
-		public void SetAllSides(int side1, int side2, int side3, int side4) {
+		public void SetSides(int side1, int side2, int side3, int side4) {
 			s1 = side1;
 			s2 = side2;
 			s3 = side3;
@@ -22,5 +22,13 @@ namespace InheritanceInGeometry
 			var totalLength = s1 + s2 + s3 + s4;
 			return totalLength;
 		}
-    }
+		//overloaded constructor
+		public Quadrilateral(int side1, int side2, int side3, int side4) {
+			SetSides(side1, side2, side3, side4);
+		}
+		//default constructor
+		public Quadrilateral() {
+
+		}
+	}
 }

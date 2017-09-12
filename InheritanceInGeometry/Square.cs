@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace InheritanceInGeometry {
 	public class Square : Parallelogram {
-		public void SetAllSides(int length) {
-			SetAllSides(length, length);
+		public void SetSides(int length) {
+			SetSides(length, length);
+		}
+		public Square(int side) : base(side, side) {
+			//SetSides(side);
+		}
+		public Square() : base() {
+
 		}
 	}
 }
